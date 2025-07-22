@@ -7,7 +7,7 @@
   --primary-bg-color: #111217;
   --secondary-bg-color: #28292E;
   --primary-border-color: #28292E;
-	--secondary-border-color: #56575A;
+  --secondary-border-color: #56575A;
 
   --title-color: #F0F0F0;
   --text-color: #9A9A9C;
@@ -18,23 +18,28 @@
 :root[data-theme='light'] {
   --primary-color: #0B0B0F;
 
-	--primary-bg-color: #E9E9E9;
-	--secondary-bg-color: #C7C8C9;
-	--primary-border-color: #C7C8C9;
-	--secondary-border-color: #9A9A9C;
+  --primary-bg-color: #E9E9E9;
+  --secondary-bg-color: #C7C8C9;
+  --primary-border-color: #C7C8C9;
+  --secondary-border-color: #9A9A9C;
 
-	--title-color: #0B0B0F;
-	--text-color: #28292E;
-	--link-color: #28292E;
-	--icon-color: #56575A;
+  --title-color: #0B0B0F;
+  --text-color: #28292E;
+  --link-color: #28292E;
+  --icon-color: #56575A;
 }
 
 html[data-theme='light'] .brand__logo {
+  transition: filter .4s ease-in-out;
   filter: invert(1);
 }
 
-html[data-theme='light'] .technologies__logo {
-  filter: invert(80%);
+html[data-theme='dark'] #toggleTheme {
+  filter: invert(1);
+}
+
+html[data-theme='light'] #toggleTheme {
+  filter: invert(1);
 }
 
 * {
@@ -129,6 +134,7 @@ p {
   width: 100%;
   padding: 0.5rem 1rem;
   z-index: 2;
+  background-image: url("../images/Fundo.png");;
 }
 
 .header__toggle {
@@ -139,13 +145,23 @@ p {
 .header__brand .brand__logo {
   width: 3.25rem;
   height: 3.25rem;
+  border-radius: 20%;
 }
 
 #toggleTheme {
+  width: 3rem;
+  height: 3rem;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
   font-size: 1.5rem;
   color: var(--primary-color);
   cursor: pointer;
   transition: ease-in-out .4s;
+  background: var(--primary-bg-color);
+  border-radius: 20%;
+
 }
 
 .menu {
@@ -259,9 +275,16 @@ main {
   gap: 1.5rem;
 }
 
-.main__content2 iframe {
+.main__content2 {
   width: 100%;
-  aspect-ratio: 16/9;
+}
+
+.main__content2 img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  
 }
 
 .technologies {
@@ -283,9 +306,14 @@ main {
 }
 
 .technologies__list {
-  display: flex;
-  flex-flow: row wrap;
-  gap: .5rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem 2.5rem;
+  justify-items: center;
+  align-items: center;
+  width: max-content;
+  margin: 0 auto;
 }
 
 .technologies__item {
@@ -432,8 +460,7 @@ main {
   gap: 2rem;
 }
 
-.about__content2 .col1 .row1,
-.about__content2 .col1 .row2 {
+.about__content2 .col1 .row1, .about__content2 .col1 .row2 {
   display: flex;
   flex-direction: column;
   gap: .5rem; 
@@ -460,8 +487,7 @@ main {
   border-radius: 0.25rem 0.25rem 0rem 0rem;
 }
 
-.accordion__header.end,
-.accordion__item.active .accordion__body.end {
+.accordion__header.end, .accordion__item.active .accordion__body.end {
   border-radius: 0rem 0rem 0.25rem 0.25rem;
 }
 
@@ -528,7 +554,11 @@ footer p {
     position: fixed;
     border-bottom: 1px solid var(--primary-border-color);
     padding: 1rem 6rem;
-    background: var(--primary-bg-color);
+    background-color: var(--primary-bg-color);
+    background-image: url("../images/Fundo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
   .nav--mobile {
@@ -539,8 +569,7 @@ footer p {
     display: flex;
   }
 
-  .header__nav,
-  .header__toggle {
+  .header__nav, .header__toggle {
     min-width: 30%;
   }
 
@@ -595,6 +624,29 @@ footer p {
 
   .about {
     gap: 5rem;
+  }
+
+  .about__photo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: url('../images/Fundo.png') center/cover no-repeat;
+    padding: 12px;
+    box-sizing: border-box;
+  }
+
+  .about__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    background: #f0f0f0;
+    border: none;
+    display: block;
   }
 
   .about__content1, .about__content2 {
