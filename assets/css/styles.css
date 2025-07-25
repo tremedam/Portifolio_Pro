@@ -109,7 +109,7 @@ h2 {
 
 h3 {
   font-size: 1.55rem;
-  text-align: left;
+  text-align: center;
 }
 
 h4 {
@@ -311,6 +311,21 @@ main {
 .main__content2 h2 {
   margin-top: 5rem;
   margin-bottom: 0.1rem;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.main__content2 h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 3px;
+  background: linear-gradient(90deg, #0024c4, hwb(187 17% 0%));
+  border-radius: 2px;
+  
 }
 
 .carousel { 
@@ -599,16 +614,16 @@ main {
 .projects h2 {
   position: relative;
   padding-top: 2rem;
-  padding-bottom: 3rem;
+  padding-bottom: 100px;
 }
 
-.projects h2::before {
+.projects h2::after {
   content: '';
   position: absolute;
-  top: 0;
+  bottom: 80px;
   left: 50%;
   transform: translateX(-50%);
-  width: 90px;
+  width: 300px;
   height: 3px;
   background: linear-gradient(90deg, #0024c4, hwb(187 17% 0%));
   border-radius: 2px;
@@ -718,6 +733,20 @@ main {
   text-align: center;
   align-content: center;
   justify-content: center;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.about h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 3px;
+  background: linear-gradient(90deg, #0024c4, hwb(187 17% 0%));
+  border-radius: 2px;
 }
 
 .about__description {
@@ -756,21 +785,21 @@ main {
 .about__content2 .col2 h3 {
   position: relative;
   padding-top: 2rem;
+  padding-bottom: 10px;
+  text-align: center;
 }
 
-.about__content2 .col1 h3::before,
-.about__content2 .col2 h3::before {
+.about__content2 .col1 h3::after,
+.about__content2 .col2 h3::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 90px;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
   height: 3px;
   background: linear-gradient(90deg, #0024c4, hwb(187 17% 0%));
   border-radius: 2px;
-  align-items: center;
-  align-self: center;
-  
 }
 
 .about__content3 {
@@ -783,11 +812,26 @@ main {
   padding: 2rem 0;
   max-width: 800px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .about__content3 h3 {
   text-align: center;
   margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.about__content3 h3::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 3px;
+  background: linear-gradient(90deg, #0024c4, hwb(187 17% 0%));
+  border-radius: 2px;
 }
 
 .about__content3 h4 {
@@ -796,18 +840,6 @@ main {
   text-align: center;
   position: relative;
   padding-bottom: 1rem;
-}
-
-.about__content3 h4::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90px;
-  height: 3px;
-  background: linear-gradient(90deg, #0024c4, hwb(187 17% 0%));
-  border-radius: 2px;
 }
 
 .about__content3 span {
@@ -825,6 +857,70 @@ main {
   width: fit-content;
 }
 
+/* Estilo específico para o accordion da seção de experiências */
+.about__content3 #accordion-experiences {
+  width: 100%;
+  max-width: 800px;
+  align-self: stretch;
+}
+
+.about__content3 .accordion__item {
+  width: 100%;
+}
+
+.about__content3 .accordion__header {
+  width: 100%;
+  display: flex;
+  padding: 0.75rem 1rem;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--primary-border-color);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  transition: ease-in-out .3s;
+  box-sizing: border-box;
+}
+
+.about__content3 .accordion__header span {
+  color: var(--title-color);
+  flex: 1;
+  text-align: center;
+  margin: 0 1rem;
+}
+
+.about__content3 .accordion__body {
+  display: none;
+  padding: 1.25rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.625rem;
+  border: 1px solid var(--primary-border-color);
+  text-align: left;
+  width: 100%;
+}
+
+.about__content3 .accordion__body h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.about__content3 .accordion__body span {
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.about__content3 .accordion__body p {
+  text-align: justify;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.about__content3 .accordion__item.active .accordion__body {
+  display: flex;
+}
+
 .accordion__header {
   width: 100%;
   display: flex;
@@ -840,6 +936,9 @@ main {
 
 .accordion__header span {
   color: var(--title-color);
+  flex: 1;
+  text-align: center;
+  margin: 0 1rem;
 }
 
 .accordion__header.start {
@@ -1030,6 +1129,7 @@ footer a {
     background: url('../images/Fundo.png') center/cover no-repeat;
     padding: 12px;
     box-sizing: border-box;
+    margin: 0 auto;
   }
 
   .about__photo {
@@ -1046,16 +1146,14 @@ footer a {
   .about__content1, .about__content2 {
     display: grid;
     grid-template-columns: 34% 60%;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     gap: 4rem;
   }
 
-  .about__description h2 {
-    text-align: left;
-  }
-
-  .description__buttons {
+.about__description h2 {
+  text-align: center;
+}  .description__buttons {
     justify-content: flex-start;
   }
 }
