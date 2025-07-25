@@ -1053,7 +1053,52 @@ footer a {
   font-weight: bold;
 }
 
-/* Responsividade */
+/* Melhorias simples para dispositivos pequenos (mobile) */
+@media (max-width: 480px) {
+  .technologies__list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .carousel__btn--prev {
+    left: -40px;
+  }
+  
+  .carousel__btn--next {
+    right: -40px;
+  }
+  
+  .main__content2 h2::after,
+  .projects h2::after,
+  .about h2::after,
+  .about__content2 .col1 h3::after,
+  .about__content2 .col2 h3::after,
+  .about__content3 h3::after,
+  .contact h2::after {
+    width: 250px;
+  }
+}
+
+/* Responsividade - Tablets */
+@media (min-width: 481px) and (max-width: 991px) {
+  .header {
+    padding: 1rem 3rem;
+  }
+  
+  main, .projects, .contact {
+    padding: 3rem 2rem;
+  }
+  
+  .about {
+    padding: 3rem 2rem;
+  }
+  
+  .technologies {
+    padding: 6rem 2rem 2rem;
+  }
+}
+
+/* Responsividade - Desktop */
 @media (min-width: 768px) {
   .header {
     position: fixed;
@@ -1299,4 +1344,14 @@ footer a {
   .about {
     padding: 2.2rem 15rem 4rem 15rem;
   }
+}
+
+/* Melhorias para touch devices */
+.btn,
+.carousel__btn,
+.carousel__dot,
+.accordion__header,
+.menu__link,
+.technologies__item {
+  -webkit-tap-highlight-color: transparent;
 }
