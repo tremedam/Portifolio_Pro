@@ -36,6 +36,29 @@ A página está **disponível online** através do GitHub Pages! Você pode acom
 
 > 🔗 **Link em breve** - A URL será disponibilizada após o primeiro deploy via GitHub Actions
 
+### ⚠️ Recomendação para Melhor Experiência
+
+Embora o portfólio esteja disponível no GitHub Pages, **recomendo fortemente clonar este repositório** e abrir o arquivo `index.html` localmente para uma **visualização completa e otimizada**.
+
+**Por quê?**
+- 🎨 **Preservação de estilos**: Todos os tons de cores e efeitos visuais funcionam perfeitamente
+- ⚡ **Funcionalidades completas**: Todas as interações e animações funcionam sem limitações
+- 🔧 **Sem bugs do GitHub Pages**: Evita possíveis problemas de renderização ou carregamento
+- 🚀 **Performance máxima**: Carregamento mais rápido e responsivo
+
+### 📥 Como Clonar e Executar
+
+```bash
+# Clone o repositório
+git clone https://github.com/tremedam/Portifolio_Pro.git
+
+# Navegue até a pasta
+cd Portifolio_Pro
+
+# Abra o index.html no seu navegador preferido
+# Ou use a extensão Live Server no VS Code para melhor experiência
+```
+
 ## 🔄 Atualizações Constantes
 
 Este projeto está em **desenvolvimento contínuo**. Conforme vou:
