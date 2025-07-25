@@ -6,7 +6,7 @@
   <title>Thiago F.S Dias | Portfólio Profissional</title>
   <meta name="description" content="Portfólio de aspirante a desenvolvedor Full-Stack Thiago F.S Dias para compartilhar projetos e habilidades desenvolvidas.">
 
-  <link rel="shortcut icon" href="TD.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="Favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -76,7 +76,7 @@
 
   <main id="home">
     <div class="main__content1">
-      <h1><b>Inovação em Foco &amp;</b> Desenvolvimento Full-Stack</h1>
+      <h1><b>Foco em Inovação &amp;</b> Desenvolvimento Full-Stack</h1>
       <p>Thiago F.S Dias, Tietê-SP, aspirante a desenvolvedor Full Stack.</p>
       <ul class="menu menu--social">
         <li>
@@ -92,9 +92,18 @@
       </ul>
       <div class="main__content2">
       <h2>Alguns projetos de destaque</h2>
-      <img src="assets/images/yugioh.png" alt="Site Yugioh">
-      <img src="assets/images/Miranha.png" alt="Site Homem-Aranha">
-      <img src="assets/images/DetonaRalph.png" alt="Site Detona Ralph">
+      <div class="carousel">
+        <button class="carousel__btn carousel__btn--prev" aria-label="Anterior"><i class="bi bi-chevron-left"></i></button>
+        <div class="carousel__track-wrapper">
+          <div class="carousel__track">
+            <img class="carousel__img" src="assets/images/yugioh.png" alt="Site Yugioh">
+            <img class="carousel__img" src="assets/images/Miranha.png" alt="Site Homem-Aranha">
+            <img class="carousel__img" src="assets/images/DetonaRalph.png" alt="Site Detona Ralph">
+          </div>
+        </div>
+        <button class="carousel__btn carousel__btn--next" aria-label="Próximo"><i class="bi bi-chevron-right"></i></button>
+      </div>
+      <div class="carousel__dots"></div>
     </div>
       <a href="#projetos">
         <button class="btn btn--primary">
@@ -159,15 +168,14 @@
               <img class="technologies__logo" src="assets/images/technologies/Java.svg" alt="Logo Java">
             </li>
           </ul>
-          <div class="card__buttons">
-            <button class="btn btn--primary">
-              <span>Prévia</span>
-              <i class="bi bi-arrow-up-right"></i>
-            </button>  
-            <button class="btn">
-              <span>Repositório</span>
-            </button>  
-          </div>
+          <a href="https://github.com/tremedam?tab=repositories&q=&type=&language=java&sort=">
+            <div class="card__buttons">
+              <button class="btn btn--primary">
+                <span>Prévia</span>
+                <i class="bi bi-arrow-up-right"></i>
+              </button>
+            </div>
+          </a>
         </div>
       </div>
       <div class="projects__card card--reverse">
@@ -195,10 +203,7 @@
             <button class="btn btn--primary">
               <span>Prévia</span>
               <i class="bi bi-arrow-up-right"></i>
-            </button>  
-            <button class="btn">
-              <span>Repositório</span>
-            </button>  
+            </button>
           </div>
         </div>
       </div>
@@ -227,14 +232,11 @@
             <button class="btn btn--primary">
               <span>Prévia</span>
               <i class="bi bi-arrow-up-right"></i>
-            </button>  
-            <button class="btn">
-              <span>Repositório</span>
-            </button>  
+            </button>
           </div>
         </div>
       </div>
-      <a href="https://github.com/tremedam">
+      <a href="https://github.com/tremedam?tab=repositories">
         <button class="btn btn--primary">
           <span>Ver Todos os Projetos</span>
           <i class="bi bi-arrow-up-right"></i>
@@ -263,99 +265,225 @@
               <i class="bi bi-arrow-up-right"></i>
             </button> 
           </a>
-          <a href="">
-            <button class="btn">
-              <span>Currículo</span>
-            </button>
-          </a>
         </div>
       </div>
     </div>
     <div class="about__content2">
       <div class="col1">
-        <div class="row1">
-          <h3>Formação</h3>
-          <h4>Gestão na Tecnologia da Informação</h4>
-          <span>2025 - Atualmente</span>
-          <div class="about__icons">
-            <i class="bi bi-bank"></i>
-            <span>Fatec Tatuí - Prof. Wilson Roberto Ribeiro de Camargo - Faculdade de Tecnologia de Tatuí</span>
+        <h3>Formação</h3>
+        <div id="accordion-formation">
+          <div class="accordion__item active">
+            <button class="accordion__header start">
+              <span>Tecnologo - Gestão na Tecnologia da Informação (GTI)</span>
+              <i class="bi bi-caret-down-fill"></i>
+            </button>
+            <div class="accordion__body">
+              <h4>Fatec Tatuí</h4>
+              <span>2025 - Atualmente</span>
+              <p>
+                Prof. Wilson Roberto Ribeiro de Camargo - Faculdade de Tecnologia de Tatuí
+              </p>
+              <p>
+                Curso superior de tecnologia focado em gestão de projetos de TI, 
+                infraestrutura, segurança da informação e administração de sistemas.
+              </p>
+            </div>
           </div>
-          <div class="about__icons">
-            <i class="bi bi-mortarboard"></i>
-            <span>Desenvolvimento de Sistemas (DS) - Escola Técnica Estadual Doutor Nelson Alves Vianna</span>
+          
+          <div class="accordion__item">
+            <button class="accordion__header">
+              <span>Técnico - Desenvolvimento de Sistemas (DS)</span>
+              <i class="bi bi-caret-down-fill"></i>
+            </button>
+            <div class="accordion__body">
+              <h4>ETEC Nelson Alves Vianna</h4>
+              <span>2019 - 2021</span>
+              <p>
+                Escola Técnica Estadual Doutor Nelson Alves Vianna
+              </p>
+              <p>
+                Curso técnico focado em desenvolvimento de sistemas, programação, 
+                banco de dados e análise de sistemas.
+              </p>
+            </div>
           </div>
-          <div class="about__icons">
-            <i class="bi bi-mortarboard"></i>
-            <span>Administração (ADM) - Escola Técnica Estadual Doutor Nelson Alves Vianna</span>
+          
+          <div class="accordion__item">
+            <button class="accordion__header end">
+              <span>Técnico - Administração (ADM)</span>
+              <i class="bi bi-caret-down-fill"></i>
+            </button>
+            <div class="accordion__body end">
+              <h4>ETEC Nelson Alves Vianna</h4>
+              <span>2017 - 2019</span>
+              <p>
+                Escola Técnica Estadual Doutor Nelson Alves Vianna
+              </p>
+              <p>
+                Curso técnico em administração com foco em gestão empresarial, 
+                recursos humanos e processos administrativos.
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="row2">
-          <h3>Experiências</h3>
-          <h4>SAC Marketplace e Auxiliar de Suporte</h4>
-          <span>Cybelar. 2024 - 2025</span>
-          <span>Atendimento a cliente via Marketplaces (Meli,B2W,Magalu,Amazon) e auxilio de suporte tecnológico (meio periodo TI).</span>
-          <ul class="about__list">
-            <li class="about__item">Atendimento ao cliente;</li>
-            <li class="about__item">Documentação de processos;</li>
-            <li class="about__item">Criação de projetos tecnológicos para suporte.</li>
-          </ul>
-          <h4>Analise de Negócio</h4>
-          <span>Cybelar. 2025 - Atualmente</span>
-          <span> Auxilio na gestão de Projetos, análise de requisitos e documentação técnica.</span>
-          <ul class="about__list">
-            <li class="about__item">Documentação técnica;</li>
-            <li class="about__item">Análise e parametrização de requisitos;</li>
-            <li class="about__item">Gestão e organização de projetos tecnológicos.</li>
-          </ul>
         </div>
       </div>
       <div class="col2">
-        <h3>Cursos</h3>
+        <h3>Cursos e Certificações</h3>
         <div id="accordion">
           <div class="accordion__item active">
             <button class="accordion__header start">
-              <span>Versionamento de Código com Git e GitHub</span>
+              <span>Java Cloud Native - 90h</span>
               <i class="bi bi-caret-down-fill"></i>
             </button>
             <div class="accordion__body">
               <p>
-                Digital Innovation One. Fev 2023. 2h.
+                Bootcamp da DIO e Bradesco. Mai 2025.
               </p>
               <p>
-                O que é versionamento de código, Git e GitHub. Como instalar e configurar o Git em diferentes sistemas 
-                operacionais e como autenticar via Token e SSH. Como manusear repositórios, indo desde a criação e clonagem 
-                até o gerenciamento de branches, passando por todas as etapas de salvar, desfazer e sincronizar alterações 
-                com o repositório remoto. 
+                Experiência teórica e prática em desenvolvimento Java, com foco em banco de dados relacionais (SQL) 
+                e não relacionais (MongoDB), além de integração com plataformas em nuvem como Azure e Azure OpenAI. 
+                Atuação com Inteligência Artificial, desenvolvimento e documentação de APIs RESTful, aplicações 
+                Java Cloud Native e uso do framework Spring Boot.
               </p>
             </div>
           </div>
           <div class="accordion__item">
             <button class="accordion__header">
-              <span>Contribuindo em um Projeto Open Source no GitHub</span>
+              <span>Front - end do Zero - 75h</span>
               <i class="bi bi-caret-down-fill"></i>
             </button>
             <div class="accordion__body">
               <p>
-                Digital Innovation One. Fev 2023. 1h.
+                Bootcamp da DIO e Ri Happy. Jul 2025.
               </p>
               <p>
-                Lab prático sobre colaboração em projetos de código aberto.
+                Experiência teórica e prática em desenvolvimento Front-end, com foco em HTML, CSS e JavaScript.
+                Aprendizado de boas práticas de desenvolvimento, responsividade e acessibilidade, além de criação
+                de interfaces interativas. Este projeto de portifólio inclusive foi desenvolvido durante o bootcamp.
               </p>
             </div>
           </div>
           <div class="accordion__item">
             <button class="accordion__header end">
-              <span>Organizando seus Estudos com os Roadmaps DIO e o Notion</span>
+              <span>Qlik Cloud e Alteryx - 28h</span>
               <i class="bi bi-caret-down-fill"></i>
             </button>
             <div class="accordion__body end">
               <p>
-                Digital Innovation One. Fev 2023. 2h.
+                Nordica. Set 2023 a Jan 2025
               </p>
               <p>
-                Otimização dos estudos com os Roadmaps DIO, construindo um caderno de estudos com a ferramenta Notion.
+                Experiência teórica e prática em Qlik Cloud e Alteryx, com foco em análise de dados, 
+                criação de dashboards e automação de processos. Aprendizado de técnicas avançadas de 
+                visualização de dados e integração com outras ferramentas.
               </p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__header end">
+              <span>Lei de proteção de dados - 2h</span>
+              <i class="bi bi-caret-down-fill"></i>
+            </button>
+            <div class="accordion__body end">
+              <p>
+                Fundação Brasdesco. Jan 2025
+              </p>
+              <p>
+                Experiência teórica em Lei Geral de Proteção de Dados (LGPD), com foco em
+                princípios, direitos dos titulares e obrigações dos controladores e operadores de dados.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about__content3">
+          <h3>Experiências</h3>
+          <div id="accordion-experiences">
+            <div class="accordion__item active">
+              <button class="accordion__header start">
+                <span>Auxiliar de suporte e Análise de Negócio - TI</span>
+                <i class="bi bi-caret-down-fill"></i>
+              </button>
+              <div class="accordion__body">
+                <h4>Cybelar Comércio e Indústria Ltda.</h4>
+                <span>2025 - Atualmente</span>
+                <p> 
+                  Atuação no suporte à gestão de projetos e coordenação de equipe, 
+                  com foco na análise de requisitos técnicos e operacionais para o 
+                  desenvolvimento de sistemas. Responsável pela comunicação com clientes 
+                  internos e externos, suporte às lojas e elaboração de documentação 
+                  técnica de procedimentos, APIs e sistemas integrados.
+                </p>
+                <ul class="about__list">
+                  <li class="about__item">Documentação técnica;</li>
+                  <li class="about__item">Análise e parametrização de requisitos;</li>
+                  <li class="about__item">Gestão e organização de projetos tecnológicos;</li>
+                  <li class="about__item">Auxilio na gestão de atividades de equipe.</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="accordion__item">
+              <button class="accordion__header">
+                <span>SAC Marketplace e Auxiliar de Suporte TI</span>
+                <i class="bi bi-caret-down-fill"></i>
+              </button>
+              <div class="accordion__body">
+                <h4>Cybelar Comércio e Indústria Ltda.</h4>
+                <span>2024 - 2025</span>
+                <p>
+                  Atendimento a clientes via plataformas de Marketplaces (Meli, B2W, Magalu e Amazon) 
+                  e auxilio de suporte tecnológico as lojas (meio periodo no TI).
+                </p>
+                <ul class="about__list">
+                  <li class="about__item">Atendimento ao cliente internos e externos;</li>
+                  <li class="about__item">Documentação de processos de loja e SAC;</li>
+                  <li class="about__item">Escopamento de projetos e melhorias tecnológicos para suporte.</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="accordion__item">
+              <button class="accordion__header">
+                <span>SAC Marketplace e Auxiliar de Logistica</span>
+                <i class="bi bi-caret-down-fill"></i>
+              </button>
+              <div class="accordion__body">
+                <h4>Cybelar Comércio e Indústria Ltda.</h4>
+                <span>2024</span>
+                <p>
+                  Responsável pelo atendimento a clientes em plataformas de marketplaces 
+                  (Mercado Livre, B2W, Magalu e Amazon), além da co-criação e gestão de um 
+                  projeto de torre de controle logístico. O projeto teve início em planilhas 
+                  Excel e foi posteriormente evoluído para um sistema integrado, desenvolvido 
+                  em parceria com a equipe de TI.
+                </p>
+                <ul class="about__list">
+                  <li class="about__item">Atendimento ao cliente via Marketplace;</li>
+                  <li class="about__item">Análise e acompanhamento de torre de controle logístico;</li>
+                  <li class="about__item">Suporte e cobrança a logística sobre entregas atrasadas;</li>
+                  <li class="about__item">Criação de projetos tecnológicos para suporte.</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="accordion__item">
+              <button class="accordion__header end">
+                <span>Auxiliar Comercial</span>
+                <i class="bi bi-caret-down-fill"></i>
+              </button>
+              <div class="accordion__body end">
+                <h4>Cybelar Comércio e Indústria Ltda.</h4>
+                <span>2023 - 2024</span>
+                <p>Auxiliar administrativo de compradores e analistas, com foco em suporte a lojas 
+                  e a logística.</p>
+                <ul class="about__list">
+                  <li class="about__item">Atendimento a clientes internos e fornecedores;</li>
+                  <li class="about__item">Auxilio administrativo a equipe Comercial;</li>
+                  <li class="about__item">Lançamento de precificação e promoções.</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -394,6 +522,6 @@
       <a href="https://github.com/tremedam" target="_blank">Thiago F.S Dias</a>.
     </p>
   </footer>
-  <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/scripts.js" defer></script>
 </body>
 </html>
