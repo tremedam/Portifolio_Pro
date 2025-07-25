@@ -34,7 +34,7 @@ A partir desta base sólida, realizei modificações significativas para criar m
 
 A página está **disponível online** através do GitHub Pages! Você pode acompanhar a versão mais atual do portfólio acessando a seção **Actions** deste repositório, onde é feito o deploy automático sempre que há atualizações.
 
-> 🔗 **Link em breve** - A URL será disponibilizada após o primeiro deploy via GitHub Actions
+> 🔗 https://tremedam.github.io/Portifolio_Pro/ - A URL tambem esta disponibilizada via GitHub Actions
 
 ### ⚠️ Recomendação para Melhor Experiência
 
